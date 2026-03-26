@@ -1,29 +1,36 @@
 Algoritmo "CampeonatoFutbol"
 
 Var
+
    times: vetor[1..3] de caractere
+   time1, time2: caractere
    c, indice: inteiro
-   nomeTime1, nomeTime2: caractere
+
 Inicio
    escreval("------------------")
    escreval("CAMPEONATO FUTEBOL")
    escreval("------------------")
    para c <- 1 ate 3 faca
-      escreva("Nome do ",c, "º time: ")
+      escreva("Nome do",c,"º time: ")
       leia(times[c])
    fimpara
+
    limpatela
-   escreval("-------------------")
-   escreval(" TABELA DE PARTIDAS")
-   escreval("-------------------")
+
+   escreval("--------------------")
+   escreval(" TABELA DE PARTIDAS ")
+   escreval("--------------------")
+
    para c <- 1 ate 3 faca
-      nomeTime1 <- times[c]
+
+      time1 <- times[c]
 
       para indice <- 1 ate 3 faca
-          nomeTime2 <- times[indice]
-         se ( nomeTime1 <> nomeTime2) entao
-            escreval(nomeTime1, nomeTime2)
+         se (time1 <> times[indice]) entao
+            escreval(time1:15,"[ ] x [ ]":15,times[indice])
          fimse
+
       fimpara
    fimpara
+
 Fimalgoritmo
